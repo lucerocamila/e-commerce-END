@@ -122,7 +122,7 @@ text-shadow: 1px 3px 1px rgb(167, 167, 167);
   margin-top: .2rem;
 }
 
-.cards-grid{
+.cards-container{
   display: grid;
   width: 100%;
   gap: 1rem;
@@ -355,7 +355,7 @@ margin-bottom: 2rem;
 }
 
 @media screen and (min-width:600px){
-  .cards-grid{
+  .cards-container{
     grid-template-columns: 2fr 2fr ;
   }
   .home-interfaz{
@@ -366,7 +366,7 @@ margin-bottom: 2rem;
 }
 
 @media screen and (min-width:750px){
-  .cards-grid{
+  .cards-container{
     grid-template-columns: 2fr 2fr 2fr;
   }
   .pucharse-card ul{

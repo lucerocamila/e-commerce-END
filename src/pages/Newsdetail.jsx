@@ -79,7 +79,7 @@ const Newsdetail = () => {
         <section style={{background:" rgba(0, 0, 0, 0.034)",marginTop:"3rem"}}>
 
             <h3 className='suggered-title'>you may also like...</h3>
-         <article className='cards-grid'>
+         <article className='cards-container'>
                 {sugeridos.map(prod=>{
                     return(
                 <ul style={{height:"280px"}} key={prod.id} className='card'>

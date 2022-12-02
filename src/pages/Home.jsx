@@ -59,7 +59,7 @@ const Home = () => {
       </InputGroup>
     </section>
   
-  <section className='cards-grid'>
+  <section className='cards-container'>
             {products.map(prod=>{  
     return(
       <ul style={{height:"280px"}} key={prod.id} className='card'>
