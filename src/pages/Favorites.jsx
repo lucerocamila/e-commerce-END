@@ -1,27 +1,27 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { getPucharseThunk } from '../store/slices/pucharse.slice';
+import { getPurchaseThunk } from '../store/slices/Purchase.slice';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 const Favorites = () => {
-const pucharse=useSelector(state=>state.pucharse)
+const Purchase=useSelector(state=>state.Purchase)
 const dispatch=useDispatch(); 
 
 useEffect(()=>{
-dispatch(getPucharseThunk())
+dispatch(getPurchaseThunk())
 },[])
 
-console.log(pucharse)
+console.log(Purchase)
     return (
         <div>
             <h2 style={{textAlign:"center"}}>purchases</h2>
-            {pucharse.map(pucharse=>{
+            {Purchase.map(Purchase=>{
                 return(
-                    <div className='pucharse-card' key={pucharse.cartId}>
-                        <p>{pucharse.createdAt}</p>
-                        {pucharse.cart.products.map((product,index)=>{
+                    <div className='Purchase-card' key={Purchase.cartId}>
+                        <p>{Purchase.createdAt}</p>
+                        {Purchase.cart.products.map((product,index)=>{
                             return(
                                 <ul key={index}>
                                     <Link to={`/product/${product.id}`}>

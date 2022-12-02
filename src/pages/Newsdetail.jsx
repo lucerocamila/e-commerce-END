@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { getProducstThunk } from '../store/slices/products.slice';
+import { getProductsThunk } from '../store/slices/products.slice';
 import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/esm/Button';
 import { useNavigate } from 'react-router-dom';
@@ -19,7 +19,7 @@ const Newsdetail = () => {
     const products=useSelector(state=>state.products)
 
     useEffect(()=>{
-        dispatch(getProducstThunk())
+        dispatch(getProductsThunk())
     },[])
 
     const productDetail=products.find(pro=>pro.id==id)
@@ -69,28 +69,26 @@ const Newsdetail = () => {
                 <input type="number" placeholder='quantity' value={quantityy} onChange={(e)=>setQuanty(e.target.value)}/>
                 <i className='bx bxs-plus-circle bx-md buyy' onClick={()=>setQuanty(quantityy +1)}></i>
             </div>
-            <button onClick={addProduct} className='buy-details'>Buy <i className='bx bxs-shopping-bags'></i></button>
+            <button onClick={addProduct} className='buy-details' style={{justifySelf:'start'}}>Buy <i className='bx bxs-shopping-bags'></i></button>
             </article>
 
-            <div className='imagenes-detailpro'>
-                        {productDetail?.productImgs.map((img,index)=><img onClick={()=>setImage(img)} key={index} src={img} alt='' width="100px"/>)}
-            </div>
+            
 
         <section style={{background:" rgba(0, 0, 0, 0.034)",marginTop:"3rem"}}>
 
-            <h3 className='suggered-title'>you may also like...</h3>
-         <article className='cards-container'>
+         <article className='container-cards'>
+
                 {sugeridos.map(prod=>{
                     return(
-                <ul style={{height:"280px"}} key={prod.id} className='card'>
-                         <li style={{overflow:"auto"}}>{prod.title}</li>
+                <ul style={{height:"280px"}} key={prod.id} className='card'>                    <img src={prod.productImgs[0]}alt=""/>
+
+                         <li >{prod.title}</li>
                         <li> {prod.category.name}</li>
-                    <img src={prod.productImgs[0]}alt=""/>
                      <li className='buying'>{prod.price}$</li>
                     <Button onClick={()=>{
                         setImage(prod.productImgs[0])
                         navigatee(`/product/${prod.id}`)
-                        }} variant="primary"><i className='bx bx-shopping-bag'></i> Go in details
+                        }} variant="secondary"><i className='bx bx-shopping-bag'></i> More details
                     </Button>
                 </ul>
                     )

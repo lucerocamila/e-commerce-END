@@ -34,30 +34,23 @@ const submi =(data)=>{
 
     return (
         <div>
-            <h2 style={{textAlign:"center"}}>login</h2>
+            <h2 style={{textAlign:"center", fontSize:'18px'}}>Sing in</h2>
 
-            <div className='test-user'>
-                <h5>test user</h5>
-                <p><mail:gonzalezlucerocamila@gmailcom</p>
-                <p>password:lucerocamila</p>
-            </div>
 
             <Form onSubmit={handleSubmit(submi)} style={{margin:"0 auto",maxWidth:500}}>
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Email address</Form.Label>
+        <Form.Label>Email address (max@gmail.com)</Form.Label>
         <Form.Control type="email" placeholder="Enter email" {...register("email")} />
-        <Form.Text className="text-muted">
-        We'll never share your email with anyone else.
-        </Form.Text>
+       
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
+        <Form.Label>Password (pass1234)</Form.Label>
         <Form.Control type="password" placeholder="Password" {...register("password")}/>
       </Form.Group>
 
-      <Button variant="primary" type="submit">
-        Submit
+      <Button className='btn-enter' type="submit">
+        Enter
       </Button>
     </Form>
         </div>

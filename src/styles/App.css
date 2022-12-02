@@ -1,3 +1,6 @@
+.App{
+  background: rgba(54, 11, 95, 0.199);
+}
 /*Roller*/
 .lds-roller {
   position: fixed;
@@ -22,7 +25,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: rgba(39, 40, 41, 0.822);
+  background: rgba(70, 5, 81, 0.822);
   margin: -3px 0 0 -3px;
 }
 .lds-roller div:nth-child(1) {
@@ -92,37 +95,37 @@
 /*Roller END*/
 
 .buying{
-  color: rgb(201, 152, 17);
+  color: rgb(87, 7, 59);
   transition: all .3s;
 }
 .buying:hover{
-  text-shadow: 2px 2px 6px  rgb(204, 209, 197);
   transform: scale(.9);
 }
 .title-prod{
 text-shadow: 1px 3px 1px rgb(167, 167, 167);
 }
-/*HOME SECCION*/
+/*HOME section*/
 
-.home-interfaz{
+.home-middlez{
   display: grid;
   justify-content:center;
   margin: 0rem 1rem;
   margin-top: 3rem;
 }
 
-.categories-home{ 
+.home-categories{ 
   width: 100%;
   max-width: 10rem;
 }
-.categories-home ul{
+.home-categories ul{
  list-style: none;
 }
-.categories-home li{
+.home-categories li{
   margin-top: .2rem;
+
 }
 
-.cards-container{
+.container-cards{
   display: grid;
   width: 100%;
   gap: 1rem;
@@ -141,7 +144,9 @@ text-shadow: 1px 3px 1px rgb(167, 167, 167);
   border-radius: 3%;
  
 }
-
+.card:hover{
+  background-color: rgba(0, 0, 0, 0.392);
+}
 .card li:nth-child(1){
   background-color: rgba(66, 167, 255, 0.13);
   border-radius: 3%;
@@ -151,11 +156,10 @@ text-shadow: 1px 3px 1px rgb(167, 167, 167);
   border-radius: 3%;
 }
 .card img{
- 
   width: 100px;
   max-height: 120px;
 }
-/*HOME SECCION CLOSE*/
+/*HOME end*/
 ul{
   list-style: none;
 }
@@ -179,18 +183,9 @@ ul{
 }
 
 
-.zzz{
-  background-color: rgba(0, 0, 0, 0.849);
-
-}
-.zzz a{
-  color:white;
-}
-
 
 .card-detail ul{
 list-style: none;
-overflow:auto;
 max-height: 15rem;
 }
 .card-detail img{
@@ -201,7 +196,7 @@ max-height: 15rem;
 }
 
 
-.imagenes-detailpro{
+.better-img{
   margin: auto;
   width: 100%;
   border-bottom: 1px solid rgba(20, 0, 0, 0.322);
@@ -210,21 +205,20 @@ max-height: 15rem;
   justify-content: space-evenly;
   margin-top: 2rem;
 }
-.imagenes-detailpro img{
-  background-color: rgba(3, 3, 0, 0.103);
+.better-img img{
+  background-color: rgba(80, 80, 62, 0.103);
   max-height: 7rem;
   padding: .2rem;
   border-radius: 5%;
   transition: all .2s;
 }
-.imagenes-detailpro img:hover{
+.better-img img:hover{
 background-color: rgba(13, 9, 33, 0.267);
 transform: scale(1.1);
 padding: .5rem;
 }
 .suggered-title{
 border-bottom: 1px solid rgba(0, 0, 0, 0.116);
-text-shadow: 1px 3px 1px rgb(167, 167, 167);
 color: rgba(0, 0, 0, 0.952);
  position: relative;
  top: 2rem;
@@ -259,32 +253,30 @@ transition: all .2s;
 .buyy:hover{
   transform: scale(1.2);
 }
-/*PUCHARSE SECCION*/
-.pucharse-card{
+/*Purchase section*/
+.Purchase-card{
   border-radius: 1%;
   text-align: center;
   width: 70%;
   margin: auto;
   display: flex;
   flex-direction: column;
-  background-color: #e4e4e4;
+  background-color: #eb9f9f;
   margin-top: 2rem;
   padding: 1rem;
 }
 
-.pucharse-card a{
-  text-shadow: 1px 1px 10px rgb(0, 0, 0);
+.Purchase-card a{
   color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
-.pucharse-card p{
-  overflow: auto;
+.Purchase-card p{
   text-align: start;
   padding: 1rem;
   border-bottom: 2px solid gray;
 }
-.pucharse-card ul{
+.Purchase-card ul{
   gap: 1rem;
   flex-direction: column;
   width: 100%;
@@ -293,31 +285,30 @@ transition: all .2s;
   justify-content: space-around;
   border-bottom: 2px solid rgba(104, 104, 104, 0.432);
 }
-.pucharse-card li{
+.Purchase-card li{
   text-align:center;
 }
-.pucharse-card li:nth-child(1):hover{
+.Purchase-card li:nth-child(1):hover{
   border-bottom: 1px solid black;
 }
-.pucharse-card li:nth-child(2){
+.Purchase-card li:nth-child(2){
   border-radius: 3%;
   color: black;
   border: 2px solid gray;
   padding: .4rem 1rem;
 }
-.pucharse-card li:nth-child(3){
+.Purchase-card li:nth-child(3){
   color:rgb(104, 113, 90);
- text-shadow: 1px 1px 2px rgb(0, 0, 0);
   
 }
 
 .detail-button-buy input{
   width: 80px;
 }
-/*cerrado pucharse*/
+/*Purchase END*/
 
 
-/*CART seccion*/
+/*CART section*/
 
 .product-cart{
   border-radius: 5%;
@@ -337,7 +328,7 @@ transition: all .2s;
 
 .test-user{
 color: white;
-background: black;
+background: rgb(177, 17, 240);
 border-radius: 3%;
 width: 90%;
 max-width: 20rem;
@@ -353,12 +344,14 @@ margin-bottom: 2rem;
 .test-user h5{
   color:  white;
 }
-
+.btn-enter{
+  background-color: blueviolet;
+}
 @media screen and (min-width:600px){
-  .cards-container{
+  .container-cards{
     grid-template-columns: 2fr 2fr ;
   }
-  .home-interfaz{
+  .home-middlez{
     gap: 5rem;
     grid-template-columns: 1fr 5fr;
   }
@@ -366,10 +359,10 @@ margin-bottom: 2rem;
 }
 
 @media screen and (min-width:750px){
-  .cards-container{
+  .container-cards{
     grid-template-columns: 2fr 2fr 2fr;
   }
-  .pucharse-card ul{
+  .Purchase-card ul{
     flex-direction: row;
     border-bottom: none;
   }

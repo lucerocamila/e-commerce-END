@@ -36,11 +36,11 @@ console.log(cart)
                                 <Button onClick={()=>{
                                 navigate(`product/${pro.id}`)
 
-                                }} style={{borderRadius:"8px"}}>Info<i className='bx bx-question-mark'></i>
+                                }} style={{borderRadius:"8px"}}>Detail<i className='bx bx-question-mark'></i>
                                 </Button>
 
                                 </div>
-                            <span>quantity:{pro.productsInCart.quantity}</span>
+                            <span>Quantity:{pro.productsInCart.quantity}</span>
                             <p>Price/Uni:{pro.price}$</p>
                             <p>Total price: {pro.price*pro.productsInCart.quantity}$</p>
                             <Button  onClick={()=>dispath(DeleteproductCartThunk(pro))} style={{borderRadius:"8px"}}>Delete<i className='bx bxs-trash'></i></Button>
@@ -48,7 +48,7 @@ console.log(cart)
                 </ul>
                 )
             })}
-                    <Button style={{width:"100%",borderRadius:"8px"}} onClick={()=>dispath(CheckproductCartThunk())}>Checkout<i className='bx bx-check'></i></Button>
+                    <Button style={{width:"100%",borderRadius:"8px"}} onClick={()=>dispath(CheckproductCartThunk())}>Check<i className='bx bx-check'></i></Button>
         </Offcanvas.Body>
       </Offcanvas> 
         </>
